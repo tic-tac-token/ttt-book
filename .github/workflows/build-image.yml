@@ -1,0 +1,37 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    env:
+      DOCKER_CLI_EXPERIMENTAL: enabled
+      DOCKER_BUILDKIT: 1
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set env
+        run: |
+          export TAG_NAME="0.4.17"
+          echo "PKG_TAG=cmendenhall/fleek-mdbook-builder:${TAG_NAME}" >> "${GITHUB_ENV}"
+      
+      - run: docker version
+
+      - name: Build Docker image
+        run: |
+          cd docker && docker build --tag "${PKG_TAG}" . 
+      
+      - name: Login to Registry
+        if: ${{ github.ref == 'refs/heads/main' }}
+        env:
+          DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+        run: |
+          echo "${DOCKER_HUB_TOKEN}" | docker login -u cmendenhall --password-stdin
+      
+      - name: Push to Docker Hub
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: docker push "${PKG_TAG}"
