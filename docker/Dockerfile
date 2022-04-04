@@ -1,0 +1,5 @@
+FROM rust:1.59.0
+
+ARG MDBOOK_VERSION
+ENV MDBOOK_VERSION ${MDBOOK_VERSION:-0.4.17}
+RUN cargo install mdbook --version "${MDBOOK_VERSION}"

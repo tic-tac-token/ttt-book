@@ -1,7 +1,7 @@
 {
   "build": {
-    "image": "peaceiris/mdbook:v0.4.15-rust",
-    "command": "build",
+    "image": "cmendenhall/fleek-mdbook-builder:0.4.17",
+    "command": "mdbook build",
     "publicDir": "book"
   }
 }
