@@ -1,7 +1,7 @@
 # Property based testing
 We could leave our fully-functional Fizzbuzz here, but before we wrap up, let's take a look at another powerful features of the Forge test runner: property-based "fuzz tests."
 
-The four unit tests we wrote to test drive our solution touch only a few points in the infinite domain of our `fizzbuzz` function. Sure, we picked them because they are specific, special cases, but wouldn't it be nice to have a little more confidence by testing a few more? We're in luck, because Forge makes it easy to turn our unit tests into _property-based tests_.
+The four unit tests we wrote to test drive our solution touch only a few points in the enormous domain of our `fizzbuzz` function. Sure, we picked them because they are specific, special cases, but wouldn't it be nice to have a little more confidence by testing a few more? We're in luck, because Forge makes it easy to turn our unit tests into _property-based tests_.
 
 Forge will interpret any unit test function that takes an argument as a property based test, and run it multiple times with randomly assigned values. Let's just update our first unit test for now, by adding a `uint256` argument to the test function and replacing the hardcoded value in the assertion.
 

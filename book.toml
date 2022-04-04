@@ -4,6 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Tic Tac Token"
+description = "Learn Foundry, Ethereum, and Solidity by building a web3 Tic-Tac-Toe game"
 
 [output.html]
 additional-js = ["src/static/solidity.min.js"]
