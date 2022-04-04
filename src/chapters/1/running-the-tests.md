@@ -1,5 +1,5 @@
 # Running the tests
-Run `forge test` to compile the project and run the tests:
+Running the `forge test` command will compile the project and run the tests:
 
 ```bash
 $ forge test

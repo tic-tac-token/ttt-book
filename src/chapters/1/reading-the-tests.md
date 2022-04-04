@@ -52,14 +52,14 @@ contract GreeterTest is DSTest {
 }
 ```
 
-Our test suite is defined as a Solidity contract. 
+Our test suite is defined as a Solidity _contract_, which looks a lot like a class or module in other languages. 
 
 ```solidity
 contract GreeterTest is DSTest {
 }
 ```
 
-We create an instance of the contract we're testing in the `setUp` function:
+We create an instance of the contract we're testing in the `setUp` function, and access it later in our tests:
 
 ```solidity
     function setUp() public {
@@ -67,7 +67,7 @@ We create an instance of the contract we're testing in the `setUp` function:
     }
 ```
 
-Each test method is a public function prefixed with `test`. Inside each of these functions, we have access to assertions like `assertEq`: 
+Each test method is a public function prefixed with the word `test`. Inside each of these functions, we have access to assertions like `assertEq`: 
 
 ```solidity
     function test_default_greeting() public {

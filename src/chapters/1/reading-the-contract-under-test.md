@@ -1,5 +1,5 @@
 # Reading the contract under test
-Let's take a look at `Greeter.sol`, the contract under test, and see what we can deduce:
+Similarly, Let's take a look at `Greeter.sol`, the contract under test, and see what we can deduce. Here it is in full:
 
 ```solidity
 // SPDX-License-Identifier: Apache-2.0
@@ -51,15 +51,19 @@ Define variables with visibility:
     string public greeting;
 ```
 
-Create functions with and without arguments:
+Create functions with arguments:
+
+```solidity
+    function greet(string memory name) public view returns (string memory) {
+        return _buildGreeting(name);
+    }
+```
+
+...and without them:
 
 ```solidity
     function greet() public view returns (string memory) {
         return _buildGreeting("world");
-    }
-
-    function greet(string memory name) public view returns (string memory) {
-        return _buildGreeting(name);
     }
 ```
 
@@ -83,4 +87,4 @@ Set variables:
     }
 ```
 
-Some of this, like the keyword `contract` and the `abi.encodePacked` function, may look a little esoteric, but most of this code should be pretty legible. Again, if you squint hard enough, it kind of looks like Javascript.
+Some of this, like the keyword `contract`, types like `(string memory)`, and the `abi.encodePacked` function, may look a little esoteric, but most of this code should be pretty legible. Again, if you squint hard enough, it kind of looks like Javascript.

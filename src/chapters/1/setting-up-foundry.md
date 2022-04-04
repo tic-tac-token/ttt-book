@@ -14,7 +14,7 @@ $ foundryup
 You should see output like the following in your terminal:
 
 ```bash
-foundryup: installing foundry (version nightly, tag nightly-a0db055a6873bd8819a1b9e1a9ad3f3046ca772f)
+foundryup: installing foundry (version nightly, tag nightly-a0db055a68733f3046ca772f)
 foundryup: downloading latest forge and cast
 ############################################# 100.0%
 ############################################# 100.0%
@@ -32,7 +32,14 @@ $ forge --version
 forge 0.2.0 (a0db055 2022-04-03T00:03:53.441110+00:00)
 ```
 
-Foundry is under active development, so it's a good idea to run `foundryup` regularly to install the latest changes.  
+And `cast --version`:
+
+```bash
+$ cast --version
+cast 0.2.0 (a0db055 2022-04-03T00:03:53.441110+00:00)
+```
+
+Foundry is under active development, so it's a good idea to run `foundryup` regularly to install the latest changes. The Foundry team publishes new builds nightly.  
 
 Once Foundry is installed, you should be able to interact with the `forge` and `cast` command line tools. Let's try `cast`, a multitool for interacting with Ethereum. We'll use the `--to-ascii` command, which converts a hex value to an ASCII string:
 
