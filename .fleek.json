@@ -1,0 +1,7 @@
+{
+  "build": {
+    "image": "peaceiris/mdbook:v0.4.15-rust",
+    "command": "build",
+    "publicDir": "book"
+  }
+}
