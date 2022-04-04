@@ -2,7 +2,7 @@
 
 Property-based tests are like running many randomly generated unit test cases, but we can do even better using *symbolic execution*. Rather than picking a specific, concrete integer value of `n` for each test, symbolic execution uses a special VM that leaves the value `n` as an abstract representation and exhaustively explores every possible execution path. This is more like a proof than a test, since it covers every possible input. 
 
-Foundry does not yet support symbolic execution and testing, although it's on the roadmap. Insteaad we can use its predecessor [Dapptools](http://dapp.tools/) to write a few symbolic execution tests.
+Foundry does not yet support symbolic execution and testing, although it's on the roadmap. Instead we can use its predecessor [Dapptools](http://dapp.tools/) to write a few symbolic execution tests.
 
 > **Installing Dapptools**
 >

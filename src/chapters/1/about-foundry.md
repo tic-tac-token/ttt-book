@@ -7,4 +7,6 @@ Foundry's HEVM equivalent is [revm](https://github.com/bluealloy/revm), a Rust v
 
 Foundry is friendlier than Dapptools, but it still has a learning curve. It's a little bit like Vim: very powerful, very Unixy, and a little overwhelming at first. But just like Vim, I think the payoff of learning the tool is worth the effort. Starting this project from the ground up with Foundry is a great way to learn it from scratch.
 
-The [Foundry Book](https://book.getfoundry.sh/) is a great resource if you want to learn more.
+> **Foundry Resources**
+>
+> The [Foundry Book](https://book.getfoundry.sh/) is a great resource if you want to learn more. If you need help, try the official [support Telegram](https://t.me/+pqodMdZCoQQyZGI6).
