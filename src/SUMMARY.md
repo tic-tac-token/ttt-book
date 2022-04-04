@@ -13,7 +13,7 @@
     - [Reading the contract](./chapters/1/reading-the-contract-under-test.md)
   - [Writing our first contract](./chapters/1/writing-our-first-contract.md)
     - [Writing the first test](./chapters/1/writing-the-first-test.md)
-    - [Some Solidity syntax](./chapters/1/some-solidity-syntax.md)
+    - [Some Solidity concepts](./chapters/1/some-solidity-concepts.md)
     - [Running the first test](./chapters/1/running-the-first-test.md)
     - [Test driving Fizzbuzz](./chapters/1/test-driving-fizzbuzz.md)
     - [Importing a library](./chapters/1/importing-a-library.md)

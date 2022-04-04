@@ -1,6 +1,6 @@
-# Some Solidity syntax
+# Some Solidity concepts
 
-Let's stop and cover a bit of Solidity syntax while we're here: [visibility](https://docs.soliditylang.org/en/latest/contracts.html#visibility-and-getters), [value types](https://docs.soliditylang.org/en/latest/types.html#value-types), and [reference types](https://docs.soliditylang.org/en/latest/types.html#reference-types). For reference, here's the function we just defined:
+Let's stop and cover a few Solidity concepts while we're here: [visibility](https://docs.soliditylang.org/en/latest/contracts.html#visibility-and-getters), [value types](https://docs.soliditylang.org/en/latest/types.html#value-types), and [reference types](https://docs.soliditylang.org/en/latest/types.html#reference-types). For reference, here's the function we just defined:
 
 ```solidity
 contract FizzBuzz {
