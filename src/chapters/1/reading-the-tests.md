@@ -1,9 +1,9 @@
 # Reading the tests
 Foundry uses an [xUnit](https://en.wikipedia.org/wiki/XUnit) style test framework called `ds-test`, written in Solidity. Unlike other Solidity development frameworks, this makes it possible to write pure Solidity unit tests.
 
-Test files are created as `.sol` files in the `src/test/` directory. It's a convention to put an extra `.t` in the test file name, so `Greeter.t.sol` is the test file for the `Greeter.sol` contract. (However, this is just a convention—the test runner will recognize as tests any files that inherit from `ds-test`).
+Test files are created as `.sol` files in the `src/test/` directory. It's a convention to put an extra `.t` in the test file name, such that `Greeter.t.sol` is the test file for the `Greeter.sol` contract. (However, this is just a convention. The test runner will recognize as tests any files that inherit from `ds-test`).
 
-Let's take a look at our test file, `Greeter.t.sol`. We haven't covered Solidity syntax in detail yet, but it should still be legible enough:
+Let's take a look at our test file, `Greeter.t.sol`. We haven't covered Solidity syntax in detail yet, but hopefully it will be legible enough to make some observations:
 
 ```solidity
 // SPDX-License-Identifier: Apache-2.0
@@ -67,7 +67,19 @@ We create an instance of the contract we're testing in the `setUp` function, and
     }
 ```
 
-Each test method is a public function prefixed with the word `test`. Inside each of these functions, we have access to assertions like `assertEq`: 
+Each test method is a public function prefixed with the word `test`. 
+
+```solidity
+    function test_default_greeting() public { }
+    
+    function test_custom_greeting() public { }
+
+    function test_get_greeting() public { }
+    
+    function test_set_greeting() public { }
+```
+
+Inside each of these functions, we have access to assertions like `assertEq`: 
 
 ```solidity
     function test_default_greeting() public {
@@ -75,4 +87,4 @@ Each test method is a public function prefixed with the word `test`. Inside each
     }
 ```
 
-If you've used an xUnit style test framework before, this should all be pretty familiar. With the exception of a few keywords, this looks a lot like Javascript.
+If you've used an xUnit style test framework before, this should all be pretty familiar. In fact, with the exception of a few keywords, this looks a lot like Java or Javascript.

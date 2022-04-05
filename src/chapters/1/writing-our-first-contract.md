@@ -35,7 +35,9 @@ contract FizzBuzzTest is DSTest {
 }
 ```
 
-One short note on style: it's conventional to use `mixedCase` for Solidity function and variable names, but I like to intentionally break this rule for test functions and use `snake_case` instead. This helps distinguish them from production code when reading test output and function traces.
+> **Function names**
+>
+> A brief style note: it's conventional to use `mixedCase` for Solidity function and variable names, but I like to intentionally break this rule for test functions and use `snake_case` instead. This helps distinguish them from production code when reading test output and function traces.
 
 Let's give our newly created tests a spin:
 
@@ -62,7 +64,7 @@ Location:
    cli/src/cmd/utils.rs:43
 ```
 
-Oops—we forgot to create our contract under test! Fortunately, the Solidity compiler outbut is usually very helpful—here it points to the location of the missing import. Let's create `FizzBuzz.sol` and try again:
+Oops, we forgot to create our contract under test! Fortunately, the Solidity compiler outbut is usually very helpful. Here, it points to the location of the missing import, and prints the full path to the file it can't find. Let's create `FizzBuzz.sol` and try again:
 
 ```bash
 $ touch src/FizzBuzz.sol
@@ -74,8 +76,7 @@ For now, we'll just create an empty contract:
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.10;
 
-contract FizzBuzz {
-}
+contract FizzBuzz {}
 ```
 
 With our empty production contract in place, let's try again:
@@ -102,4 +103,4 @@ Failed tests:
 Encountered a total of 1 failing tests, 0 tests succeeded
 ```
 
-Success! Math is not actually broken, and our test failed as it should. Forge printed the expected and actual values to help us diagnose the failure. 
+Success! Fortunately, math is not actually broken, and our test failed as it should. Forge printed the expected and actual values to help us diagnose the failure. 

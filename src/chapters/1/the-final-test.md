@@ -41,7 +41,7 @@ Failed tests:
 Encountered a total of 1 failing tests, 3 tests succeeded
 ```
 
-Add the laziest solution possible:
+And finally, add the laziest solution possible, which completes our Fizzbuzz:
 
 ```solidity
 // SPDX-License-Identifier: Apache-2.0

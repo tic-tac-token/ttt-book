@@ -2,9 +2,9 @@
 
 ![Tic Tac Token App](./img/ttt-app.png)
 
-Over the course of this curriculum, we'll learn the basics of Solidity and Ethereum from the ground up by creating an interactive web3 Tic-Tac-Toe game. We'll learn to write and test Solidity smart contracts using Foundry and Hardhat. We'll learn about ERC20 tokens, NFTs, and other Ethereum abstractions. We'll create a React frontend using useDapp and Ethers and deploy it to IPFS, a distributed peer-to-peer filesystem. Finally, we'll deploy our smart contracts to Polygon, an EVM-compatible blockchain with fast, cheap transactions.
+Over the course of this curriculum, we'll learn the basics of Solidity and Ethereum from the ground up by creating an interactive web3 Tic-Tac-Toe game. We'll learn to write and test Solidity smart contracts using Foundry and Hardhat. We'll explore ERC20 tokens, NFTs, and other Ethereum abstractions. We'll create a React frontend using useDapp and Ethers and deploy it to IPFS, a distributed peer-to-peer filesystem. Finally, we'll deploy our smart contracts to Polygon, an EVM-compatible blockchain with fast, cheap transactions.
 
-The content in this book was originally written as a supplement to a series of hands on workshops. We typically cover one chapter per week, with two one hour sessions dedicated to writing code collaboratively using [Live Share](https://code.visualstudio.com/learn/collaboration/live-share).
+The content in this book was originally written as a supplement to a series of hands on workshops. In person, we typically cover one chapter per week, with two one hour sessions dedicated to writing code collaboratively using [Live Share](https://code.visualstudio.com/learn/collaboration/live-share).
 
 ## Prerequisites
 

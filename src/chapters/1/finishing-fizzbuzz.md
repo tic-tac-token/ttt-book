@@ -16,7 +16,7 @@ Although our tests all pass, our code is still pretty naive. We've hardcoded `if
     }
 ```
 
-Here's our failing test output:
+With the above tests in place, here's our failing test output:
 
 ```bash
 $ forge test
@@ -54,7 +54,7 @@ Failed tests:
 Encountered a total of 2 failing tests, 1 tests succeeded
 ```
 
-Like many other languages, Solidity includes a `%` [modulo operator](https://docs.soliditylang.org/en/latest/types.html#modulo) that returns the remainder after dividing two numbers. We can use it to check for divisibility:
+Like many other languages, Solidity includes a `%` [modulo operator](https://docs.soliditylang.org/en/latest/types.html#modulo) that returns the remainder after dividing two numbers. We can use it to check for divisibility by testing whether the remainder is zero:
 
 ```solidity
 contract FizzBuzz {

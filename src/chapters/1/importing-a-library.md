@@ -37,11 +37,19 @@ Location:
    cli/src/cmd/utils.rs:43
 ```
 
-Nope. The good news is that the Solidity compiler is pretty helpful in cases like these.
+Nope. The good news is that the Solidity compiler is pretty helpful in cases like these. It's told us that type conversion from `uint256` to string is not allowed. 
 
 There's no built in integer-to-string conversion in Solidity, so we have a few options: write it ourselves, copy-paste [some other implementation](https://stackoverflow.com/questions/47129173/how-to-convert-uint-to-string-in-solidity), or import a library. 
 
-Let's use a library. [OpenZeppelin Contracts](https://openzeppelin.com/contracts/) includes a string utilities library that does exactly what we need. Here's how to import and use it:
+Let's use a library. [OpenZeppelin Contracts](https://openzeppelin.com/contracts/) includes a string utilities library that does exactly what we need. 
+
+We'll first need to install it using `forge`. Running `forge install` will install a repository from Github as a git submodule in our project's `lib/` directory:
+
+```bash
+$ forge install OpenZeppelin/openzeppelin-contracts
+```
+
+Once it's installed, here's how to import and use it:
 
 ```solidity
 import "openzeppelin-contracts/contracts/utils/Strings.sol";

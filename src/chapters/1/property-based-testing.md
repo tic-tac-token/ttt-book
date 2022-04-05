@@ -1,7 +1,7 @@
 # Property based testing
-We could leave our fully-functional Fizzbuzz here, but before we wrap up, let's take a look at another powerful features of the Forge test runner: property-based "fuzz tests."
+We could leave our fully-functional Fizzbuzz here, but before we wrap up, let's take a look at another powerful feature of the Forge test runner: property-based "fuzz tests."
 
-The four unit tests we wrote to test drive our solution touch only a few points in the enormous domain of our `fizzbuzz` function. Sure, we picked them because they are specific, special cases, but wouldn't it be nice to have a little more confidence by testing a few more? We're in luck, because Forge makes it easy to turn our unit tests into _property-based tests_.
+The four unit tests we wrote to test drive our solution touch only a few points in the enormous domain of our `fizzbuzz` function. Sure, we picked them because they are specific, special cases, but wouldn't it be nice to have a little more confidence that we've covered all the edge cases by testing a few more? We're in luck, because Forge makes it easy to turn our unit tests into _property-based tests_.
 
 Forge will interpret any unit test function that takes an argument as a property based test, and run it multiple times with randomly assigned values. Let's just update our first unit test for now, by adding a `uint256` argument to the test function and replacing the hardcoded value in the assertion.
 
@@ -23,7 +23,7 @@ Here it is as a property based test parameterized by an integer `n`:
     }
 ```
 
-What happens when we run this test?
+Nice and concise: instead of cherry picking specific examples, we just define the property once. What happens when we run this test?
 
 ```bash
 $ forge test
@@ -50,7 +50,9 @@ Encountered a total of 1 failing tests, 3 tests succeeded
 
 They failed! Can you see why?
 
-It's a little hard to tell with the massive integer we got back as our counterexample, but we need to remember to limit our input parameter `n` to specific values that are divisible by three. The pattern for doing this in Forge is to use a special cheatcode, `vm.assume(bool)`. This will filter out any fuzz test inputs that don't match the specified condition. We'll need to set up access to the `Vm` interface and add a line to our test, like this:
+It's a little hard to tell thanks to the massive 256-bit integer we got back as our counterexample, but we need to constrain our input parameter `n` to specific values that are divisible by three.
+
+The pattern for doing this in Forge is to use a special cheatcode, `vm.assume(bool)`. This will filter out any fuzz test inputs that don't match the specified condition. To use this cheatcode, we'll need to set up access to the `Vm` interface and add a line to our test, like this:
 
 ```solidity
 import "ds-test/test.sol";
@@ -133,9 +135,9 @@ contract FizzBuzzTest is DSTest {
 }
 ```
 
-Note how we imported and used the `Strings.sol` library just like we did in our production code in order to convert integer values to strings in the last test case.
+Note how we imported and used the `Strings.sol` library just like we did in our production code in order to convert integer values to strings in the last test case. Our tests are just Solidity files, and we can import and use libraries and other contracts here, too.
 
-Forge will run 256 tests by default, but we can increase the number of fuzz runs with a configuration option in `foundry.toml`: 
+Forge will run 256 different values through our fuzz tests by default, but we can increase the number of runs with a configuration option in `foundry.toml`: 
 
 ```toml
 [default]
@@ -158,3 +160,5 @@ Running 4 tests for src/test/FizzBuzz.t.sol:FizzBuzzTest
 [PASS] test_returns_number_as_string_otherwise(uint256) (runs: 5000, μ: 76811, ~: 98075)
 Test result: ok. 4 passed; 0 failed; finished in 1.53s
 ```
+
+Just like that, we've run the equivalent of 20,000 unit test assertions in under 2 seconds. Pretty cool, right? But can we do better?

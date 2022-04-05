@@ -1,5 +1,5 @@
 # Reading the contract under test
-Similarly, Let's take a look at `Greeter.sol`, the contract under test, and see what we can deduce. Here it is in full:
+Similarly, let's take a look at `Greeter.sol`, the contract under test, and see what we can deduce. Here it is in full:
 
 ```solidity
 // SPDX-License-Identifier: Apache-2.0
@@ -38,7 +38,7 @@ We can import code from external files:
 import "openzeppelin-contracts/contracts/access/Ownable.sol";
 ```
 
-Use inheritance:
+Make use of something like inheritance:
 
 ```solidity
 contract Greeter is Ownable {
@@ -51,7 +51,7 @@ Define variables with visibility:
     string public greeting;
 ```
 
-Create functions with arguments:
+Create functions that take arguments:
 
 ```solidity
     function greet(string memory name) public view returns (string memory) {
@@ -59,7 +59,7 @@ Create functions with arguments:
     }
 ```
 
-...and without them:
+...as well as functions that don't:
 
 ```solidity
     function greet() public view returns (string memory) {
@@ -67,7 +67,7 @@ Create functions with arguments:
     }
 ```
 
-Set variables:
+Update variables:
 
 ```solidity
     function setGreeting(string memory _greeting) public onlyOwner {

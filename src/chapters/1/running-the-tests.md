@@ -17,4 +17,4 @@ Running 5 tests for src/test/Greeter.t.sol:GreeterTest
 Test result: ok. 5 passed; 0 failed; finished in 592.04µs
 ```
 
-Looks good—everything passed. Let's explore the test file a bit further.
+This looks good—everything passed. Let's explore the test file a bit further.

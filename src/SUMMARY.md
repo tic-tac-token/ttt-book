@@ -7,7 +7,7 @@
   - [About Solidity](./chapters/1/about-solidity.md)
   - [About Foundry](./chapters/1/about-foundry.md)
   - [Setting up Foundry](./chapters/1/setting-up-foundry.md)
-  - [Setting up a Foundry project](./chapters/1/setting-up-a-foundry-project.md)
+  - [Creating a Foundry project](./chapters/1/creating-a-foundry-project.md)
     - [Running the tests](./chapters/1/running-the-tests.md)
     - [Reading the tests](./chapters/1/reading-the-tests.md)
     - [Reading the contract](./chapters/1/reading-the-contract-under-test.md)

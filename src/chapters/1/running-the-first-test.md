@@ -23,15 +23,32 @@ Running 1 test for src/test/FizzBuzz.t.sol:FizzBuzzTest
 Test result: ok. 1 passed; 0 failed; finished in 249.13µs
 ```
 
-Success! Our first passing test. The Solidity compiler has also passed on some helpful warnings.
+Success! Our first passing test. The Solidity compiler has also passed on some helpful warnings:
+
+```
+Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+ --> /Users/ecm/Projects/forge-template/src/FizzBuzz.sol:6:23:
+  |
+6 |     function fizzbuzz(uint n) public returns (string memory) {
+  |                       ^^^^^^
+
+Warning: Function state mutability can be restricted to pure
+ --> /Users/ecm/Projects/forge-template/src/FizzBuzz.sol:6:5:
+  |
+6 |     function fizzbuzz(uint n) public returns (string memory) {
+  |     ^ (Relevant source part starts here and spans across multiple lines).
+  ```
 
 First, we're not yet using the parameter we've passed to the `fizzbuzz` function, so we can omit giving it a name. (This looks weird, but fine). 
 
-Second, since our function doesn't read or mutate any state, we can add an additional function modifier and declare it `pure`. It's good to build the habit of fixing any compiler warnings as we go. 
+Second, since our function doesn't read or mutate any state, we can add an additional function modifier and declare it `pure`. It's good to build the habit of fixing any compiler warnings as we go. We'll also use the more explicit `uint256` instead of `uint`. 
 
-Here's what our code looks like after following these recommendations:
+Here's what our full contract code looks like after following these recommendations:
 
 ```solidity
+// SPDX-License-Identifier: Apache-2.0
+pragma solidity 0.8.10;
+
 contract Fizzbuzz {
     function fizzbuzz(uint256) public pure returns (string memory) {
         return "fizz";

@@ -1,7 +1,7 @@
 # About Solidity
-Over the course of these workshops, we're going to be learning [Solidity](https://docs.soliditylang.org/), the main smart contract programming language used on [Ethereum](https://ethereum.org/), the most popular general purpose programmable blockchain. Solidity works anywhere the Ethereum Virtual Machine (EVM) does, and there are growing number of EVM-compatible blockchains that support Solidity contracts.
+Over the course of these workshops, we're going to be learning [Solidity](https://docs.soliditylang.org/), the main smart contract programming language used on [Ethereum](https://ethereum.org/), the most popular general purpose programmable blockchain. Solidity works anywhere the Ethereum Virtual Machine (EVM) does, and there are a growing number of EVM-compatible blockchains besides Ethereum that support Solidity contracts.
 
-For the first few weeks we won't spend too much time on Ethereum fundamentals. Instead, we'll treat Solidity like any other programming language without worrying too much about the execution environment. However, those details will start to creep in as we proceed through these workshops. If you want a really good grounding in Ethereum (or a review), I recommend [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook), which is available for free online.
+For the first few weeks we won't spend too much time on Ethereum fundamentals. Instead, we'll treat Solidity like any other programming language without worrying too much about its unusual execution environment. However, those details will start to creep in as we proceed through these workshops. If you want a really good grounding in Ethereum fundamentals (or a review), I recommend [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook), which is available for free online.
 
 > **Solidity Resources**
 >

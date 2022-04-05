@@ -1,14 +1,14 @@
 # Writing the first test
 
-Let's replace our intentionally failing test with our first real test:
+Let's replace our intentionally failing test with our first real test. Values divisible by 3 should print "fizz":
 
 ```solidity
 function test_returns_fizz_when_divisible_by_three() public {
-    assertE1(fizzbuzz.fizzbuzz(3), "fizz");
+    assertEq(fizzbuzz.fizzbuzz(3), "fizz");
 }
 ```
 
-Test driving our contract means we define the interface we want as we write our tests. In this case, we'll add a `fizzbuzz` function that takes an integer argument and returns a string. Let's give our tests another run:
+Test driving our contract means we define our contract's interface when we write our tests. In this case, we'll expect to add a `fizzbuzz` function that takes an integer argument and returns a string. Let's give our tests another run:
 
 ```bash
 $ forge test
@@ -28,7 +28,7 @@ Location:
    cli/src/cmd/utils.rs:43
 ```
 
-The Solidity compiler fits nicely into a TDD workflow, since the compiler will usually point towards the next incremental step. In this case, we haven't created a `fizzbuzz` funciton on our contract under test. Let's keep it disciplined and add the simplest implementation that could possibly pass:
+The Solidity compiler fits nicely into a TDD workflow, since the compiler will usually point towards the next incremental step. In this case, we haven't  yet created a `fizzbuzz` function on our contract under test. Let's keep our workflow disciplined and add the simplest implementation that could possibly pass:
 
 ```solidity
 contract FizzBuzz {
@@ -38,4 +38,4 @@ contract FizzBuzz {
 }
 ```
 
-While we're here, let's take a moment to cover a few Solidity concepts...
+And while we're here, let's take a brief detour to cover a few Solidity concepts...

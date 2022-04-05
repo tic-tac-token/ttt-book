@@ -1,6 +1,6 @@
 # Test driving Fizzbuzz
 
-Let's follow the usual TDD workflow and add a new test to drive us forward:
+Let's follow the usual TDD workflow and add a new test to drive us forward. Passing the number 5 should print "buzz":
 
 ```solidity
 function test_returns_buzz_when_divisible_by_five() public {
@@ -8,7 +8,7 @@ function test_returns_buzz_when_divisible_by_five() public {
 }
 ```
 
-Run it and see it fail:
+Run the test and see it fail:
 
 ```bash
 $ forge test
@@ -31,7 +31,7 @@ Failed tests:
 Encountered a total of 1 failing tests, 1 tests succeeded
 ```
 
-...and update our production code. Again, let's write the simplest thing that could possibly work:
+...and finally, update our production code. Again, let's write the simplest thing that could possibly work:
 
 ```solidity
 contract Fizzbuzz {
@@ -59,7 +59,7 @@ Running 2 tests for src/test/FizzBuzz.t.sol:FizzBuzzTest
 Test result: ok. 2 passed; 0 failed; finished in 319.33µs
 ```
 
-One more test:
+Looks good. Let's add one more test. Numbers that aren't divisible by either 3 or 5 should return themselves as a string:
 
 ```solidity
 function test_returns_number_as_string_otherwise() public {
@@ -67,7 +67,7 @@ function test_returns_number_as_string_otherwise() public {
 }
 ```
 
-And failure:
+Here's the failure:
 
 ```bash
 $ forge test
@@ -90,3 +90,5 @@ Test result: FAILED. 2 passed; 1 failed; finished in 1.58ms
 Failed tests:
 [FAIL] test_returns_number_as_string_otherwise() (gas: 17380)
 ```
+
+So how do we convert this value to a string?
