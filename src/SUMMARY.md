@@ -21,3 +21,9 @@
     - [The final test](./chapters/1/the-final-test.md)
   - [Property based testing](./chapters/1/property-based-testing.md)
   - [Symbolic testing](./chapters/1/symbolic-testing.md)
+# 🎮 Basic Game
+- [Creating the basic game](./chapters/2/basic-game.md)
+  - [Creating the game contract](./chapters/2/creating-the-game-contract.md)
+  - [Test driving the board](./chapters/2/test-driving-the-board.md)
+    - [Marking a space](./chapters/2/marking-spaces.md)
+    - [Validating markers](.chapters/2/validating-markers.md)
