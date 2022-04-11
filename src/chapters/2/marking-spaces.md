@@ -1,6 +1,6 @@
 # Marking a space
 
-Let's put an "X" in the first space on the board, then read it back in our test. We'll pass the index of the space in our board array and a string to represent the marker:
+Let's put an "X" in the first space on the board, then read it back in our test. We'll pass the index of the space in our board array where we want to place it and a string to represent the "X" or "O" marker:
 
 ```solidity
     function test_can_mark_space_with_X() public {
@@ -9,7 +9,7 @@ Let's put an "X" in the first space on the board, then read it back in our test.
     }
 ```
 
-We can start with an empty function in the game contract:
+We can start with an empty `markSpace` function in the game contract:
 
 ```solidity
     function markSpace(uint256 space, string calldata symbol) public {}
@@ -38,7 +38,7 @@ Failed tests:
 [FAIL] test_can_mark_space_with_X() (gas: 20298)
 ```
 
-Let's make it pass by setting the `space` index of the `board` to the `symbol` we pass in:
+This is what we expected, since we haven't implemented it yet. Again, we're getting back an empty string—the default value for a fixed length array of strings. Let's make it pass by setting the `space` index of the `board` to the `symbol` we pass in:
 
 ```solidity
     function markSpace(uint256 space, string calldata symbol) public {
@@ -76,4 +76,4 @@ Running 4 tests for src/test/TicTacToken.t.sol:TicTacTokenTest
 Test result: ok. 4 passed; 0 failed; finished in 1.90ms
 ```
 
-Of course, we get a lot more for free, too! The caller can mark the board with any arbitrary string: a "B", a "💖", a "Solidity rocks!", whatever. Let's add some validation to allow only "X" and "O". 
+Of course, we get a lot more for free, too! The caller can mark the board with any arbitrary string: a "B", a "💖", a "Solidity rocks!", whatever. Let's add some validation to allow only the markers "X" and "O". 

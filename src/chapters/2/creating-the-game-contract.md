@@ -16,13 +16,13 @@ import "ds-test/test.sol";
 contract TicTacTokenTest is DSTest {}
 ```
 
-And a new contract for the game:
+We'll do the same for the game contract. Create a new file:
 
 ```bash
 $ touch src/TicTacToken.sol
 ```
 
-We'll start with an empty contract here, too:
+And we can start with an empty contract here, too:
 
 ```solidity
 // SPDX-License-Identifier: Apache-2.0
