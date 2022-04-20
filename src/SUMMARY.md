@@ -32,3 +32,13 @@
   - [Refactoring from strings](./chapters/2/refactoring-from-strings.md)
   - [Checking for wins](./chapters/2/checking-for-wins.md)
   - [Finishing the basic game](./chapters/2/finishing-the-basic-game.md)
+# 👯‍♂️ Multiplayer
+- [Supporting multiple players](./chapters/3/supporting-multiple-players.md)
+  - [The EVM programming paradigm](./chapters/3/the-evm-programming-paradigm.md)
+  - [Deploying the basic board contract](./chapters/3/deploying-the-basic-board-contract.md)
+    - [Generating a deployment address](./chapters/3/generating-a-deployment-address.md)
+    - [Funding the deployment address](./chapters/3/funding-the-deployment-address.md)
+    - [Setting up an RPC endpoint](./chapters/3/setting-up-an-rpc-endpoint.md)
+    - [Deploying the contract](./chapters/3/deploying-the-contract.md)
+    - [Verifying the contract](./chapters/3/verifying-the-contract.md)
+  - [Exploring the basic board contract](./chapters/3/exploring-the-basic-board-contract.md)
