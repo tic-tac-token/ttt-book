@@ -16,7 +16,7 @@ Transaction hash: 0xe4955a560db459b435dbf0312cbdb913364e78d2798a14138d655bc556e1
 
 > **Key management**
 >
-> Passing a private key from the command line is a quick and dirty way to deploy our work in progress, but it's not recommended for a serioud deployment. Foundry supports a number of other, better methods for securely accessing a private key, including hardware wallets, mnemonic phrases, and an encrypted keystore file. Pretty much any of these are better options.
+> Passing a private key directly on the command line is a quick and dirty way to deploy our work in progress, but it's not recommended for a serious deployment. Foundry supports a number of other, better methods for securely accessing a private key, including hardware wallets, mnemonic phrases, and an encrypted keystore file. Pretty much any of these are better options.
 
 Notice that Forge printed our deployer account address, as well as the address of the newly deployed contract and the hash of the deployment transaction.
 

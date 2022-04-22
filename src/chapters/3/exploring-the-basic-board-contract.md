@@ -26,7 +26,7 @@ Follow the prompts to connect a wallet:
 
 <img src="../../img/connect-wallet.png" width="600" alt="Connect a wallet" />
 
-Once you're connected, you'll se a green indicator and the address of your connected account:
+Once you're connected, you'll see a green indicator and the address of your connected account:
 
 ![Wallet connected to Etherscan](../../img/wallet-connected.png)
 
@@ -34,15 +34,15 @@ From here, we can call functions on our contract! Let's marke the first space wi
 
 ![Marking the first space](../../img/mark-space.png)
 
-Remember that state changing transactions cost gas and require payment in (testnet) ether. Pressing the "Write" button will prompt your connected walled to confirm the transaction, and we'll need a sufficient ether balance in our walled in order to send the transaction and execute the function call. Here's what the prompt looks like in Metamask:
+Remember that state changing transactions cost gas and require payment in (testnet) ether. Pressing the "Write" button will prompt your connected walled to confirm the transaction, and we'll need a sufficient ether balance in our wallet in order to send the transaction and execute the function call. Here's what the prompt looks like in Metamask:
 
 <img src="../../img/metamask-prompt.png" width="400" alt="Metamask prompt" />
 
 If you're following along and need Rinkeby ETH, you can request it from the [Paradigm faucet](https://faucet.paradigm.xyz/) to your wallet address just like we did when we funded the deployer account.
 
-Watch for a notification from your wallet that the transaction is confirmed. Depending on how congested the testnet is, it may take a few seconds to a few minutes for your transaction to be mined and confirmed.
+Watch for a notification from your wallet that the transaction is confirmed. Depending on how busy the testnet is, it may take a few seconds to a few minutes for your transaction to be mined and confirmed.
 
-Once it's confirmed, we can return to the "Read" tab and see the new stte of the board. Sure enough, it's now player O's turn and the first square is marked:
+Once it's confirmed, we can return to the "Read" tab and see the new state of the board. Sure enough, it's now player O's turn and the first square is marked:
 
 ![Updated board](../../img/updated-board.png)
 

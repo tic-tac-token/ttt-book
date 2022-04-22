@@ -13,7 +13,7 @@ Private Key: 61bc97eb39d98d3103ec4d107906575189f1c7dbebbddcb400a6cccb72e65c53
 
 > **Private Key Space**
 >
-> How can we be sure the wallet we generate is empty? What if we stumble on the same address as someone else? Although this is mathematically possible, it's incredibly unlikely in practice. An Ethereum private key is 256 bits, meaning there are \\(2^{256}\\) possible private keys. As long as your generator is really random, the odds of generating the same key twice are so low that you can safely assume them away. This is not unique to Ethereum: the same property applies for other public/private keypairs, like SSH and PGP.
+> How can we be sure the wallet we generate is empty? What if we stumble on the same address as someone else? Although this is mathematically possible, it's incredibly unlikely in practice. An Ethereum private key is 256 bits, meaning there are \\(2^{256}\\) possible private keys. As long as your generator is really random, the odds of generating the same key twice are so low that you can safely assume them away. This is not a special property of Ethereum keys: this is the case for other commonly used public key cryptosystems, like PGP and SSH.
 >
 > Visit [keys.lol](https://keys.lol/) for a great visual example of how empty the key space really is.
 

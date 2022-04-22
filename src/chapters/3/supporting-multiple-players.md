@@ -6,7 +6,7 @@ Last week we built out the core components of our Tic-tac-toe game: marking the 
 #### Goals this week
 - Add authorization to the game, so that moves can only originate from specific authorized addresses.
 - Understand the unique properties of running code on a public blockchain.
-- Learn about function modifiers, addresses, external vs contract accounts ,and `msg.sender` in Solidity.
+- Learn about function modifiers, addresses, external vs contract accounts, and `msg.sender` in Solidity.
 
 #### Suggested homework
 - Read [All about modifiers](https://medium.com/coinmonks/solidity-tutorial-all-about-modifiers-a86cf81c14cb).

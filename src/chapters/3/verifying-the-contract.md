@@ -1,6 +1,6 @@
 # Verifying the contract
 
-Verifying our contract's source code on Etherscan enables us to read and write data directly from the Etherscan interface. It's considered a good practice to verify public contracts on Etherscan, so users can inspect the underlying contract code.
+Verifying our contract's source code on Etherscan enables us to read and write data directly from the Etherscan interface. It's considered a good practice to verify public contracts on Etherscan, so that anyone can inspect the underlying contract code.
 
 Before our contract is verified, the "Contract" tab on Etherscan will show the raw bytecode of our contract. Not very helpful to anyone who might want to read and understand it:
 
@@ -8,7 +8,7 @@ Before our contract is verified, the "Contract" tab on Etherscan will show the r
 
 To verify our contract, we'll need an Etherscan API key. Create an account at [etherscan.io](https://etherscan.io/) and generate one.
 
-We'll also need to know the exact compiler version used to compile our contract. Figuring this out is kind of a pain, but we can access it by calling the Solidity compiler binary directly and passing the `--version` flag. You can find it in a hidden `.svm` directory inside your home directory. In our case, we used version `0.8.10`:
+We'll also need to know the exact compiler version used to compile our contract. Figuring this out is kind of a pain, but we can access it by calling the Solidity compiler binary directly. You can find it in a hidden `.svm` directory inside your home directory. In our case, we used version `0.8.10`:
 
 ```bash
 $ ~/.svm/0.8.10/solc-0.8.10 --version

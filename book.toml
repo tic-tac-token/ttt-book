@@ -9,3 +9,5 @@ description = "Learn Foundry, Ethereum, and Solidity by building a web3 Tic-Tac-
 [output.html]
 additional-js = ["src/static/solidity.min.js"]
 mathjax-support = true
+
+[output.wordcount]
