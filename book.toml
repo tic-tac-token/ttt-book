@@ -11,3 +11,4 @@ additional-js = ["src/static/solidity.min.js"]
 mathjax-support = true
 
 [output.wordcount]
+optional = true
