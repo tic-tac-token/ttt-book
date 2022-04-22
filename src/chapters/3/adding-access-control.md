@@ -6,11 +6,13 @@ Fortunately, another property of the weird and wonderful Ethereum programming pa
 
 > **Wallets, accounts, addresses, and keys**
 >
-> An _account_ is an entity with an ether balance that can send Ethereum transactions. There are two types of accounts: externally owned accounts and contracts. Every externally owned account (or EOA) has a corresponding public and private key, and is controlled by the owner of its private key. Contract accounts do not have keys and are instead controlled by their deployed code.
+> An _account_ is an entity with an ether balance that can send Ethereum transactions. There are two types of accounts: externally owned accounts and contracts. Every externally owned account (or "EOA") has a corresponding public and private _key_, and is controlled by the owner of its private key. Contract accounts do not have keys and are instead controlled by their deployed code.
 >
 > Every account has an _address_, a unique identifier made up of 42 hexadecimal characters, like `0xeD43C19583204FB9eFd041a4d9787bbE5c1965C3`. For an externally owned account, this address is derived from its public key. For a contract account, it's derived from the address of the contract creator and their transaction history. An address is not a public key, but it corresponds to one.
 >
 > A _wallet_ is a software application for managing an Ethereum account. It typically handles generating a keypair and corresponding address and securely storing the private key for one or many accounts.
+
+
 
 Inside a smart contract, Solidity provides a special, [globally accessible](https://docs.soliditylang.org/en/latest/units-and-global-variables.html#block-and-transaction-properties) `msg.sender` variable, which stores the address of the current caller. If the caller is an EOA, `msg.sender` will be the caller account's address. If the caller is another contract, `msg.sender` will be that contract's address.
 
@@ -135,4 +137,4 @@ Running 1 test for src/test/TicTacToken.t.sol:TicTacTokenTest
 Test result: ok. 1 passed; 0 failed; finished in 829.67µs
 ```
 
-In the context of our tests, `msg.sender` has always been another contract (remember that our ds-test test harness is itself a Solidity contract), but if an EOA were to call our `msgSender` function, it would return that EOA's address.
+In the context of our tests, `msg.sender` has always been another contract (remember that our ds-test harness is itself a Solidity contract), but if an EOA were to call our `msgSender` function, it would return that EOA's address.

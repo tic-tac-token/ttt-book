@@ -39,7 +39,7 @@ But this won't work if anyone besides our test contract calls `resetBoard`. Inst
     }
 ```
 
-Let's start with a test, then update the implementation. We'll define an `OWNER` address as a constant in our test contract, pass it as an argument to our game during setup, and
+Let's start with a test, then update the implementation. We'll define an `OWNER` address as a constant in our test contract, pass it as an argument to our game during setup, and refer to it in our test.
 
 ```solidity
     address internal constant OWNER = address(1);
@@ -103,7 +103,7 @@ Running 19 tests for src/test/TicTacToken.t.sol:TicTacTokenTest
 Test result: ok. 19 passed; 0 failed; finished in 3.70ms
 ```
 
-We still haven't added a check against the `msg.sender` in our `resetBoard` function. Let's first add a couple tests. We can use a new cheatcode to manipulate `msg.sender` in our tests. The `vm.prank` cheatcode sets the `msg.sender` address for the following line:
+We still haven't added a check against the `msg.sender` in our `resetBoard` function. Let's first add a couple tests. We can use a new cheatcode to manipulate `msg.sender` in our tests. The `vm.prank` cheatcode sets the `msg.sender` address for the following line, similar to how `vm.expectRevert` applies to the immediately following statement.
 
 
 ```solidity
