@@ -35,7 +35,7 @@ Then we can add new state variables and constructor args in our contract:
     }
 ```
 
-Now that we're storing these addresses, let's limit access to `markSpace`. Just like in `restBoard`, let's check that the caller is one of the authorized addresses. Here are a few tests:
+Now that we're storing these addresses, let's limit access to `markSpace`. Just like in `resetBoard`, let's check that the caller is one of the authorized addresses. Here are a few tests:
 
 ```solidity
     function test_auth_nonplayer_cannot_mark_space() public {
