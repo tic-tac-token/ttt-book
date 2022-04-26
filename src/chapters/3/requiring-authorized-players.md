@@ -95,6 +95,23 @@ Running 3 tests for src/test/TicTacToken.t.sol:TicTacTokenTest
 Test result: ok. 3 passed; 0 failed; finished in 2.14ms
 ```
 
+Since `msg.sender` is global, we can access it from `_validPlayer` without passing it to our helper:
+
+```solidity
+    function markSpace(uint256 space, uint256 symbol) public {
+        require(_validPlayer(), "Unauthorized");
+        require(_validSymbol(symbol), "Invalid symbol");
+        require(_validTurn(symbol), "Not your turn");
+        require(_emptySpace(space), "Already marked");
+        board[space] = symbol;
+        _turns++;
+    }
+
+    function _validPlayer() internal view returns (bool) {
+        return msg.sender == playerX || msg.sender == playerO;
+    }
+```
+
 Let's run the whole suite:
 
 ```bash
