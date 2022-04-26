@@ -6,12 +6,14 @@ Over the course of this curriculum, we'll learn the basics of Solidity and Ether
 
 The content in this book was originally written as a supplement to a series of hands on workshops. In person, we typically cover one chapter per week, with two one hour sessions dedicated to writing code collaboratively using [Live Share](https://code.visualstudio.com/learn/collaboration/live-share).
 
+Special thanks to [8th Light](https://8thlight.com/careers) for supporting these workshops.
+
 ## Prerequisites
 
-You should have some experience programming to get the most out of this content, but you don't have to be an expert. Here are a few suggested prerequisites. 
+You should have some experience programming to get the most out of this content, but you don't have to be an expert. Here are a few suggested prerequisites.
 
 - You've read chapters 1-6 of [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) to get a basic understanding of Ethereum.
 - 101 level React: You've created a basic React application. You should be familiar with create-react-app, hooks, structuring an app, and basic testing.
-- 102 level automated testing: You've written automated tests before. You should be comfortable writing unit tests and using xUnit style assertions. 
+- 102 level automated testing: You've written automated tests before. You should be comfortable writing unit tests and using xUnit style assertions.
 - 102 level UNIX: You're not afraid of the terminal. You should be familiar with Make, bash, and working on the command line.
 - 201 level polyglot programming: You've used both a dynamic language like JS/Python and a typed language like Java/Golang.
