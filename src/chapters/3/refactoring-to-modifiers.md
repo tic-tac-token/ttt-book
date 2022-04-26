@@ -79,15 +79,15 @@ Let's refactor our `_validPlayer` function and admin check to use modifiers:
     }
 
     modifier onlyPlayer() {
-        require(_validPlayer(msg.sender), "Unauthorized");
+        require(_validPlayer(), "Unauthorized");
         _;
     }
 
     function markSpace(uint256 space) public onlyPlayer {
-        require(_validTurn(msg.sender), "Not your turn");
+        require(_validTurn(), "Not your turn");
         require(_validSpace(i), "Invalid space");
         require(_emptySpace(i), "Already marked");
-        board[space] = _getSymbol(msg.sender);
+        board[space] = _getSymbol();
         _turns++;
     }
 

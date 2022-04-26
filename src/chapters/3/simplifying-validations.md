@@ -37,8 +37,8 @@ Over in our production code, we can start by getting the caller's symbol based o
 
 ```solidity
     function markSpace(uint256 space) public {
-        require(_validPlayer(msg.sender), "Unauthorized");
-        uint256 symbol = _getSymbol(msg.sender);
+        require(_validPlayer(), "Unauthorized");
+        uint256 symbol = _getSymbol();
         require(_validSymbol(symbol), "Invalid symbol");
         require(_validTurn(symbol), "Not your turn");
         require(_emptySpace(space), "Already marked");
@@ -46,9 +46,9 @@ Over in our production code, we can start by getting the caller's symbol based o
         _turns++;
     }
 
-    function _getSymbol(address player) public view returns (uint256) {
-        if (player == playerX) return X;
-        if (player == playerO) return O;
+    function _getSymbol() public view returns (uint256) {
+        if (msg.sender == playerX) return X;
+        if (msg.sender == playerO) return O;
         return EMPTY;
     }
 ```
@@ -90,15 +90,15 @@ However, now that passing an invalid symbol is impossible, we can do a bit more.
 
 ```solidity
     function markSpace(uint256 space) public {
-        require(_validPlayer(msg.sender), "Unauthorized");
-        require(_validTurn(msg.sender), "Not your turn");
+        require(_validPlayer(), "Unauthorized");
+        require(_validTurn(), "Not your turn");
         require(_emptySpace(space), "Already marked");
-        board[space] = _getSymbol(msg.sender);
+        board[space] = _getSymbol();
         _turns++;
     }
 
-    function _validTurn(address player) internal view returns (bool) {
-        return currentTurn() == _getSymbol(player);
+    function _validTurn() internal view returns (bool) {
+        return currentTurn() == _getSymbol();
     }
 ```
 
