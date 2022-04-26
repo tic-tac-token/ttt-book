@@ -11,7 +11,7 @@ To wrap up our basic board, let's add the ability to check for a winner. Let's s
     ttt.markSpace(2, X);
     assertEq(ttt.winner(), X);
   }
-  
+
   function test_checks_for_horizontal_win_row2() public {
     ttt.markSpace(3, X);
     ttt.markSpace(0, O);
@@ -29,7 +29,7 @@ $ forge test
 [⠊] Compiling...
 [⠒] Compiling 1 files with 0.8.10
 [⠢] Solc finished in 10.24ms
-Error: 
+Error:
    0: Compiler run failed
       TypeError: Member "winner" not found or not visible after argument-dependent lookup in contract TicTacToken.
         --> /Users/ecm/Projects/ttt-book-code/src/test/TicTacToken.t.sol:89:14:
@@ -40,7 +40,7 @@ Error:
 
  There are many ways to check for a winner. As we did with `currentTurn`, let's not worry just yet about the most efficient one. (We'll get to that later, when we learn about gas optimization). For now, let's add a helper to get each row, a helper to check if a row has a winner, and a loop to iterate over each row.
 
-We can use some arithmetic to check if a row contains a win by multiplying its three values. If a row is all `X`, its product will be `1 * 1 * 1 = 1`. If it's all `O`, it will be `2 * 2 * 2 = 8`.   
+We can use some arithmetic to check if a row contains a win by multiplying its three values. If a row is all `X`, its product will be `1 * 1 * 1 = 1`. If it's all `O`, it will be `2 * 2 * 2 = 8`.
 
 Here's a helper to get the product for a row:
 
@@ -48,7 +48,7 @@ Here's a helper to get the product for a row:
     function _row(uint256 row) internal view returns (uint256) {
         require(row < 3, "Invalid row");
         uint256 idx = 3 * row;
-        return board[row] * board[row+1] * board[row+2];
+        return board[idx] * board[idx+1] * board[idx+2];
     }
  ```
 
@@ -78,10 +78,10 @@ To check for a winner, let's iterate over every combination.
         for (uint256 i; i < wins.length; i++) {
             uint256 win = _checkWin(wins[i]);
             if (win == X || win == O) return win;
-        } 
+        }
         return 0;
     }
-``` 
+```
 
 Not super elegant, but it works:
 
@@ -129,7 +129,7 @@ We can add another helper and add the columns to our array of winning combinatio
         for (uint256 i; i < wins.length; i++) {
             uint256 win = _checkWin(wins[i]);
             if (win == X || win == O) return win;
-        } 
+        }
         return 0;
     }
 
@@ -156,7 +156,7 @@ Finally, we can add the diagonals:
         for (uint256 i; i < wins.length; i++) {
             uint256 win = _checkWin(wins[i]);
             if (win == X || win == O) return win;
-        } 
+        }
         return 0;
     }
 
@@ -173,7 +173,7 @@ Finally, we can add the diagonals:
     function _diag() internal view returns (uint256) {
         return board[0] * board[4] * board[8];
     }
-    
+
     function _antiDiag() internal view returns (uint256) {
         return board[2] * board[4] * board[6];
     }
@@ -193,11 +193,11 @@ Finally, let's cover our edge cases and make sure games in progress and draws re
     ttt.markSpace(5, O);
     assertEq(ttt.winner(), 0);
   }
-  
+
   function test_empty_board_returns_no_winner() public {
     assertEq(ttt.winner(), 0);
   }
-  
+
   function test_game_in_progress_returns_no_winner() public {
     ttt.markSpace(1, X);
     assertEq(ttt.winner(), 0);
