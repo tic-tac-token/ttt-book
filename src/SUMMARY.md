@@ -49,3 +49,12 @@
     - [Creating a mock user](./chapters/3/creating-a-mock-user.md)
     - [Simplifying validations](./chapters/3/simplifying-validations.md)
     - [Refactoring to modifiers](./chapters/3/refactoring-to-modifiers.md)
+# 🪙 Tokens
+- [Introducing tokens](./chapters/4/introducing-tokens.md)
+  - [Multiple games](./chapters/4/multiple-games.md)
+    - [Mappings](./chapters/4/mappings.md)
+    - [Structs](./chapters/4/structs.md)
+    - [Supporting multiple games](./chapters/4/supporting-multiple-games.md)
+    - [Refactoring internally](./chapters/4/refactoring-internally.md)
+    - [Passing game ID](./chapters/4/passing-game-id.md)
+    - [Simultaneous games](./chapters/4/simultaneous-games.md)
