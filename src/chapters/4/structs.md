@@ -1,6 +1,6 @@
 # Structs
 
-Structs group together many variables of different types in a single named value type. They may be used inside mappings and arrays and may contain mappings and arrays as fields. We can declare them with the keyword `struct`:
+Structs group together many variables of different types in a single named type. They may be used inside mappings and arrays and may contain mappings and arrays as fields. We can declare them with the keyword `struct`:
 
 ```solidity
 struct Point {
