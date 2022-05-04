@@ -58,3 +58,7 @@
     - [Refactoring internally](./chapters/4/refactoring-internally.md)
     - [Passing game ID](./chapters/4/passing-game-id.md)
     - [Simultaneous games](./chapters/4/simultaneous-games.md)
+  - [Refactoring to tokens](./chapters/4/refactoring-to-tokens.md)
+    - [The ERC20 standard](./chapters/4/the-erc20-standard.md)
+    - [Reading the standard](./chapters/4/reading-the-standard.md)
+    - [Exploring an implementation](./chapters/4/exploring-an-implementation.md)
