@@ -1,6 +1,6 @@
 # Tracking points
 
-Rather than just counting wins, let's create a more complex points based leaderboard. We can issue points based on the number of turns it takes to win: a gin in three moves should be worth more than a win in five.
+Rather than just counting wins, let's create a more complex points based leaderboard. We can issue points based on the number of turns it takes to win: a win in three moves should be worth more than a win in five.
 
 Let's award 300 points for a 3-move win, 200 for a 4-move win, and 100 for a 5-move win:
 
