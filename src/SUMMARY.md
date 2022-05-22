@@ -72,3 +72,8 @@
   - [Nonfungible tokens](./chapters/5/nonfungible-tokens.md)
   - [The ERC721 standard](./chapters/5/the-erc721-standard.md)
   - [Exploring a token](./chapters/5/exploring-a-token.md)
+  - [Creating an NFT](./chapters/5/creating-an-nft.md)
+    - [Ownership and minting](./chapters/5/ownership-and-minting.md)
+    <!-- - [Integrating with the game](./chapters/5/integrating-with-the-game.md)
+    - [Encoding on chain metadata](./chapters/5/encoding-on-chain-metadata.md)
+    - [Encoding on chain images](./chapters/5/encoding-on-chain-images.md) -->
