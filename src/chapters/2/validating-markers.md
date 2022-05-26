@@ -136,7 +136,7 @@ contract TicTacToken {
 }
 ```
 
-Note that this function is `internal` since it's an internal helper. It's `pure` since it doesn't read or write any state. And we've prefixed it with an underscore, whcih is the preferred style for internal and private functions.
+Note that this function is `internal` since it's an internal helper. It's `pure` since it doesn't read or write any state. And we've prefixed it with an underscore, which is the preferred style for internal and private functions.
 
 Let's see if our `vm.expectRevert` assertion passes now:
 
