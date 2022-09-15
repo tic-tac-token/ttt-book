@@ -15,7 +15,7 @@ Let's write a test to explore how it works:
 Run it to find out:
 
 ```solidity
-$ forge test -m msg_sender
+$ forge test -m msg_sender -vv
 
 Running 1 test for src/test/TicTacToken.t.sol:TicTacTokenTest
 [FAIL] test_msg_sender() (gas: 16368)
