@@ -22,7 +22,7 @@ Notice that Forge printed our deployer account address, as well as the address o
 
 We should be able to see our newly deployed contract on [Etherscan](https://etherscan.io/), a tool for exploring contracts, accounts, and transactions on Ethereum and test networks. Visit the Görli explorer at [https://goerli.etherscan.io/](https://goerli.etherscan.io/) and enter our contract address:
 
-![Görli Etherscan](../../img/rinkeby-etherscan.png)
+![Görli Etherscan](../../img/goerli-etherscan.png)
 
 You'll see some information about the deployed contract: the creation transaction, the address that deployed it, and its balance in (Görli) ether:
 
