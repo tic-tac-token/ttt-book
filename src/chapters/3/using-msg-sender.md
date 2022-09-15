@@ -32,6 +32,12 @@ Failed tests:
 
 In this context, `msg.sender` is the address `0xb4c79dab8f259c7aee6e5b2aa729821864227e84`, which corresponds to the address of the `TicTacTokenTest` contract. Since our test harness contract is calling the function, it's the `msg.sender`.
 
+We need to write a `msgSender` method as well:
+```solidity
+    function msgSender() public view returns (address) {
+        return address(msg.sender);
+    }
+```
 We can access the address of the current contract by calling `address(this)`. Let's update our test:
 
 ```solidity
