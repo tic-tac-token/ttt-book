@@ -49,7 +49,7 @@ Here's what our full contract code looks like after following these recommendati
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.10;
 
-contract Fizzbuzz {
+contract FizzBuzz {
     function fizzbuzz(uint256) public pure returns (string memory) {
         return "fizz";
     }
