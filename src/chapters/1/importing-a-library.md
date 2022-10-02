@@ -48,6 +48,7 @@ We'll first need to install it using `forge`. Running `forge install` will insta
 ```bash
 $ forge install OpenZeppelin/openzeppelin-contracts
 ```
+(You'll need to `git add` and `git commit` to allow forge install to work.)
 
 Once it's installed, here's how to import and use it:
 
